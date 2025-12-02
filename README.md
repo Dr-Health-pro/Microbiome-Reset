@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @Dr-Health-pro
+- 👋 Hi, I’m Dr.Q-AIHealth-pro
 - 👀 I’m interested in healtha and AI
 - 🌱 I’m currently learning MCP
 - 💞️ I’m looking to collaborate on health applications
