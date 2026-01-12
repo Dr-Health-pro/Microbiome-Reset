@@ -79,7 +79,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-2">
           <div className="flex items-center justify-center">
             <span className="text-xs md:text-sm font-semibold text-accent-400 tracking-wider">
-              VERSION 1.8
+              VERSION 1.9
             </span>
           </div>
         </div>

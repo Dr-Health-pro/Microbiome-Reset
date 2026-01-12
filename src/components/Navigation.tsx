@@ -1,10 +1,20 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const navLinks = [
     { href: '/', label: 'Home' },
@@ -14,7 +24,10 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="fixed w-full z-50 glass-effect" aria-label="Main navigation">
+    <nav
+      className={`fixed w-full z-50 glass-effect-frosted border-b border-white/10 transition-all duration-300 ${isScrolled ? 'scrolled' : ''}`}
+      aria-label="Main navigation"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
