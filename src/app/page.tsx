@@ -44,7 +44,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-2">
           <div className="flex items-center justify-center">
             <span className="text-xs md:text-sm font-semibold text-accent-400 tracking-wider">
-              VERSION 1.0
+              VERSION 1.2
             </span>
           </div>
         </div>
@@ -97,9 +97,9 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="/packages"
-                className="bg-gradient-to-r from-accent-500 to-primary-500 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-xl hover:shadow-accent-500/50 transition-all duration-300 transform hover:scale-105"
+                className="bg-[#008B8B] hover:bg-[#006666] text-white min-h-[50px] md:min-h-[60px] px-10 py-4 rounded-full font-bold text-lg shadow-xl transition-all duration-300 transform hover:scale-105"
               >
-                Explore Programs
+                Get Started Today
               </Link>
               <Link
                 href="/about"
@@ -107,6 +107,14 @@ export default function Home() {
               >
                 Learn More
               </Link>
+            </div>
+
+            {/* 30-Day Guarantee Badge */}
+            <div className="mt-8 flex justify-center">
+              <div className="bg-gradient-to-r from-green-500/20 to-accent-500/20 backdrop-blur-sm border-2 border-green-400/40 px-6 py-3 rounded-2xl flex items-center space-x-3 shadow-lg">
+                <div className="text-2xl">🛡️</div>
+                <span className="text-white font-semibold text-lg">Risk-Free 30-Day Money-Back Guarantee</span>
+              </div>
             </div>
           </motion.div>
 
@@ -244,6 +252,76 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-20 bg-navy-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <span className="text-gradient">Success Stories</span>
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Real results from real people transforming their gut health
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                quote: "After 4 weeks, my bloating disappeared and my energy levels doubled. This program truly transformed my gut health!",
+                name: "Maria R.",
+                result: "Improved Digestion & Energy"
+              },
+              {
+                quote: "I've struggled with digestive issues for years. The personalized protocol finally gave me the relief I was looking for.",
+                name: "John D.",
+                result: "Reduced Inflammation"
+              },
+              {
+                quote: "The science-backed approach and virtual support made it easy to stick with the program. I feel better than I have in a decade!",
+                name: "Sarah M.",
+                result: "Enhanced Overall Wellness"
+              },
+              {
+                quote: "My mood and mental clarity improved dramatically. I didn't realize how connected my gut health was to everything else!",
+                name: "David K.",
+                result: "Better Mood & Focus"
+              },
+              {
+                quote: "The 30-day guarantee gave me confidence to try it. Best health decision I've made this year!",
+                name: "Lisa T.",
+                result: "Optimized Gut Function"
+              }
+            ].map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="glass-effect p-6 rounded-2xl hover:bg-white/10 transition-all duration-300"
+              >
+                <div className="flex mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <span key={i} className="text-yellow-400 text-xl">★</span>
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-4 italic">"{testimonial.quote}"</p>
+                <div className="border-t border-white/10 pt-4">
+                  <p className="font-semibold text-accent-400">{testimonial.name}</p>
+                  <p className="text-sm text-gray-400">{testimonial.result}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Video Section */}
       <VideoSection />
 
@@ -264,9 +342,9 @@ export default function Home() {
             </p>
             <Link
               href="/packages"
-              className="inline-block bg-white text-primary-600 px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              className="inline-block bg-[#008B8B] hover:bg-[#006666] text-white min-h-[50px] md:min-h-[60px] px-10 py-4 rounded-full font-bold text-lg shadow-2xl transition-all duration-300 transform hover:scale-105"
             >
-              View Packages
+              Get Started Today
             </Link>
           </motion.div>
         </div>

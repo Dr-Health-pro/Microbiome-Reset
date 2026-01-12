@@ -223,9 +223,9 @@ export default function About() {
             </p>
             <a
               href="/packages"
-              className="inline-block bg-white text-primary-600 px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              className="inline-block bg-[#008B8B] hover:bg-[#006666] text-white min-h-[50px] md:min-h-[60px] px-10 py-4 rounded-full font-bold text-lg shadow-2xl transition-all duration-300 transform hover:scale-105"
             >
-              View Packages
+              Get Started Today
             </a>
           </motion.div>
         </div>

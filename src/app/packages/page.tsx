@@ -104,11 +104,10 @@ export default function Packages() {
                 )}
 
                 <div
-                  className={`glass-effect rounded-3xl p-8 h-full flex flex-col ${
-                    pkg.highlighted
-                      ? 'border-2 border-accent-400 glow-effect'
-                      : 'border border-white/10'
-                  } hover:bg-white/10 transition-all duration-300`}
+                  className={`glass-effect rounded-3xl p-8 h-full flex flex-col ${pkg.highlighted
+                    ? 'border-2 border-accent-400 glow-effect'
+                    : 'border border-white/10'
+                    } hover:bg-white/10 transition-all duration-300`}
                 >
                   {/* Header */}
                   <div className="text-center mb-6">
@@ -151,13 +150,12 @@ export default function Packages() {
                   {/* CTA Button */}
                   <Link
                     href="/contact"
-                    className={`block text-center py-4 rounded-full font-bold text-lg transition-all duration-300 ${
-                      pkg.highlighted
-                        ? 'bg-gradient-to-r from-accent-400 to-secondary-400 text-navy-900 hover:shadow-xl hover:shadow-accent-400/50 transform hover:scale-105'
-                        : 'bg-white/10 hover:bg-white/20'
-                    }`}
+                    className={`block text-center min-h-[50px] md:min-h-[60px] py-4 px-10 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 ${pkg.highlighted
+                      ? 'bg-[#008B8B] hover:bg-[#006666] text-white shadow-xl'
+                      : 'bg-white/10 hover:bg-white/20'
+                      }`}
                   >
-                    Get Started
+                    Get Started Today
                   </Link>
                 </div>
               </motion.div>
@@ -303,9 +301,9 @@ export default function Packages() {
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-white text-primary-600 px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              className="inline-block bg-[#008B8B] hover:bg-[#006666] text-white min-h-[50px] md:min-h-[60px] px-10 py-4 rounded-full font-bold text-lg shadow-2xl transition-all duration-300 transform hover:scale-105"
             >
-              Contact Us
+              Get Started Today
             </Link>
           </motion.div>
         </div>
