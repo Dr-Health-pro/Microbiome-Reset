@@ -39,6 +39,17 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden">
+      {/* Version Banner */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-navy-900/95 via-primary-900/95 to-navy-900/95 backdrop-blur-md border-b border-accent-400/20">
+        <div className="max-w-7xl mx-auto px-4 py-2">
+          <div className="flex items-center justify-center">
+            <span className="text-xs md:text-sm font-semibold text-accent-400 tracking-wider">
+              VERSION 1.0
+            </span>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-20">
         {/* Animated Background */}
