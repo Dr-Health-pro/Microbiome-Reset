@@ -17,12 +17,55 @@
     @apply bg-gradient-to-r from-accent-400 to-secondary-400 bg-clip-text text-transparent;
   }
 
+  /* ENHANCED GLASS EFFECT - PRIMARY (for cards, sections) */
   .glass-effect {
-    @apply bg-white/5 backdrop-blur-lg border border-white/10;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(0, 139, 139, 0.1);
   }
 
+  /* GLASS EFFECT - STRONG (for prominent sections like hero, Meet Dr. Q) */
+  .glass-effect-strong {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px) saturate(200%);
+    -webkit-backdrop-filter: blur(20px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px 0 rgba(0, 139, 139, 0.15),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* GLASS EFFECT - SUBTLE (for backgrounds, less prominent elements) */
+  .glass-effect-subtle {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 16px 0 rgba(0, 139, 139, 0.05);
+  }
+
+  /* GLASS EFFECT - FROSTED (for modals, overlays, navigation) */
+  .glass-effect-frosted {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  /* GLOW EFFECT ENHANCEMENT */
   .glow-effect {
-    box-shadow: 0 0 40px rgba(77, 212, 232, 0.3);
+    box-shadow: 0 0 40px rgba(0, 139, 139, 0.3),
+      0 0 80px rgba(0, 139, 139, 0.15),
+      inset 0 0 20px rgba(0, 139, 139, 0.1);
+  }
+
+  .glow-effect-hover:hover {
+    box-shadow: 0 0 60px rgba(0, 139, 139, 0.4),
+      0 0 100px rgba(0, 139, 139, 0.2),
+      inset 0 0 30px rgba(0, 139, 139, 0.15);
+    transition: box-shadow 0.3s ease;
   }
 
   @keyframes ripple {
