@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Breadcrumb from '@/components/Breadcrumb'
 
 export default function About() {
   const scientificPrinciples = [
@@ -51,6 +52,9 @@ export default function About() {
 
   return (
     <div className="pt-20">
+      {/* Breadcrumb */}
+      <Breadcrumb currentPage="About Us" />
+
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-microbiome">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

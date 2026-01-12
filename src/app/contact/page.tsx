@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import Breadcrumb from '@/components/Breadcrumb'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -36,6 +37,9 @@ export default function Contact() {
 
   return (
     <div className="pt-20">
+      {/* Breadcrumb */}
+      <Breadcrumb currentPage="Contact" />
+
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-microbiome">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

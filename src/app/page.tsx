@@ -7,6 +7,8 @@ import EmailCaptureSection from '@/components/EmailCaptureSection'
 import FAQSection from '@/components/FAQSection'
 import GuaranteeSection from '@/components/GuaranteeSection'
 import ComparisonSection from '@/components/ComparisonSection'
+import SocialProofCounters from '@/components/SocialProofCounters'
+import ScrollProgress from '@/components/ScrollProgress'
 
 export default function Home() {
   // SVG Icon Components
@@ -68,12 +70,15 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden">
+      {/* Scroll Progress Indicator */}
+      <ScrollProgress />
+
       {/* Version Banner */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-navy-900/95 via-primary-900/95 to-navy-900/95 backdrop-blur-md border-b border-accent-400/20">
         <div className="max-w-7xl mx-auto px-4 py-2">
           <div className="flex items-center justify-center">
             <span className="text-xs md:text-sm font-semibold text-accent-400 tracking-wider">
-              VERSION 1.5
+              VERSION 1.6
             </span>
           </div>
         </div>
@@ -415,6 +420,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Social Proof Counters */}
+      <SocialProofCounters />
 
       {/* Comparison Section */}
       <ComparisonSection />

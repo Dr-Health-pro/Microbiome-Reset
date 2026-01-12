@@ -1,10 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Breadcrumb from '@/components/Breadcrumb'
 
 export default function Terms() {
     return (
         <div className="pt-20">
+            {/* Breadcrumb */}
+            <Breadcrumb currentPage="Terms of Service" />
+
             {/* Hero Section */}
             <section className="relative py-20 bg-gradient-microbiome">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
