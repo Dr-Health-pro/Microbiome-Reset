@@ -14,7 +14,7 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="fixed w-full z-50 glass-effect">
+    <nav className="fixed w-full z-50 glass-effect" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -48,6 +48,8 @@ export default function Navigation() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
+            aria-label="Toggle menu"
+            aria-expanded={isOpen}
           >
             <svg
               className="w-6 h-6"

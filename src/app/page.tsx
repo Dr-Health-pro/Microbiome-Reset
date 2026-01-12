@@ -9,6 +9,7 @@ import GuaranteeSection from '@/components/GuaranteeSection'
 import ComparisonSection from '@/components/ComparisonSection'
 import SocialProofCounters from '@/components/SocialProofCounters'
 import ScrollProgress from '@/components/ScrollProgress'
+import { OrganizationSchema, ServiceSchema, FAQSchema } from '@/components/Schema'
 
 export default function Home() {
   // SVG Icon Components
@@ -78,7 +79,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-2">
           <div className="flex items-center justify-center">
             <span className="text-xs md:text-sm font-semibold text-accent-400 tracking-wider">
-              VERSION 1.6
+              VERSION 1.7
             </span>
           </div>
         </div>
@@ -694,6 +695,11 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* JSON-LD Schema Markup */}
+      <OrganizationSchema />
+      <ServiceSchema />
+      <FAQSchema />
     </div>
   )
 }
