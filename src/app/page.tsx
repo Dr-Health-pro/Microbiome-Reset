@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import VideoSection from '@/components/VideoSection'
+import EmailCaptureSection from '@/components/EmailCaptureSection'
 
 export default function Home() {
   // SVG Icon Components
@@ -69,7 +70,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-2">
           <div className="flex items-center justify-center">
             <span className="text-xs md:text-sm font-semibold text-accent-400 tracking-wider">
-              VERSION 1.3
+              VERSION 1.4
             </span>
           </div>
         </div>
@@ -548,6 +549,9 @@ export default function Home() {
 
       {/* Video Section */}
       <VideoSection />
+
+      {/* Email Capture Lead Magnet */}
+      <EmailCaptureSection />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-microbiome">

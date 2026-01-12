@@ -14,25 +14,25 @@ export default function VideoSection() {
     {
       title: 'Understanding Your Gut Microbiome',
       description: 'Learn the basics of gut health and why it matters for your overall wellness',
-      thumbnail: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&auto=format&fit=crop',
+      thumbnail: '/images/video-thumbnails/gut-microbiome.png',
       duration: '12:30'
     },
     {
       title: 'The Gut-Brain Connection',
       description: 'Discover how your gut bacteria influence your mood and mental health',
-      thumbnail: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&auto=format&fit=crop',
+      thumbnail: '/images/video-thumbnails/gut-brain-connection.png',
       duration: '15:45'
     },
     {
       title: 'Foods That Heal Your Gut',
       description: 'Essential nutrition strategies for microbiome optimization',
-      thumbnail: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&auto=format&fit=crop',
+      thumbnail: '/images/video-thumbnails/healing-foods.png',
       duration: '18:20'
     },
     {
       title: 'Probiotic vs Prebiotic: What You Need',
       description: 'Understanding the difference and how to use each effectively',
-      thumbnail: 'https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=800&auto=format&fit=crop',
+      thumbnail: '/images/video-thumbnails/probiotic-prebiotic.png',
       duration: '10:15'
     }
   ]
@@ -67,7 +67,12 @@ export default function VideoSection() {
             >
               {/* Video Thumbnail */}
               <div className="relative aspect-video bg-gradient-microbiome overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
+                <img
+                  src={video.thumbnail}
+                  alt={video.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20">
                   <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <svg
                       className="w-8 h-8 text-white ml-1"
@@ -78,8 +83,9 @@ export default function VideoSection() {
                     </svg>
                   </div>
                 </div>
-                {/* Placeholder for video thumbnail */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/50 to-accent-500/50"></div>
+                <div className="absolute top-2 left-2 bg-accent-500/90 px-3 py-1 rounded-full text-xs font-bold">
+                  COMING SOON
+                </div>
                 <div className="absolute bottom-2 right-2 bg-black/70 px-2 py-1 rounded text-sm font-semibold">
                   {video.duration}
                 </div>
