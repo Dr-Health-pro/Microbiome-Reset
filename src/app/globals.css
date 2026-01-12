@@ -96,4 +96,51 @@
     outline: 2px solid #4DD4E8;
     outline-offset: 2px;
   }
+
+  /* Navigation scroll enhancement */
+  nav.glass-effect-frosted.scrolled {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(30px) saturate(200%);
+    -webkit-backdrop-filter: blur(30px) saturate(200%);
+    box-shadow: 0 10px 40px rgba(0, 139, 139, 0.2);
+  }
+
+  /* Trust badge styling */
+  .trust-badge {
+    background: linear-gradient(135deg, rgba(0, 139, 139, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(0, 139, 139, 0.3);
+    box-shadow: 0 4px 16px rgba(0, 139, 139, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+
+  /* Guarantee badge styling */
+  .guarantee-badge {
+    background: linear-gradient(135deg,
+        rgba(34, 197, 94, 0.15) 0%,
+        rgba(0, 139, 139, 0.15) 100%);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .guarantee-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent);
+    transition: left 0.5s;
+  }
+
+  .guarantee-badge:hover::before {
+    left: 100%;
+  }
 }
