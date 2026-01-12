@@ -47,7 +47,7 @@ export default function SocialProofCounters() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="glass-effect p-6 rounded-2xl text-center"
+                            className="glass-effect-strong p-6 rounded-2xl text-center stat-card"
                         >
                             <div className="text-5xl mb-3">{stat.icon}</div>
                             <div className="text-4xl md:text-5xl font-bold text-accent-400 mb-2">

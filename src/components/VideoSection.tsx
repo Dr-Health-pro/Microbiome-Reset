@@ -63,7 +63,7 @@ export default function VideoSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="glass-effect rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300 group cursor-pointer"
+              className="glass-effect-strong rounded-2xl overflow-hidden video-card hover:scale-105 transition-all duration-300 group cursor-pointer"
             >
               {/* Video Thumbnail */}
               <div className="relative aspect-video bg-gradient-microbiome overflow-hidden">
@@ -73,7 +73,7 @@ export default function VideoSection() {
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 rounded-full play-button flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <svg
                       className="w-8 h-8 text-white ml-1"
                       fill="currentColor"
