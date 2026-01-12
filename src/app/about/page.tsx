@@ -127,6 +127,103 @@ export default function About() {
         </div>
       </section>
 
+      {/* About Dr. Q Section */}
+      <section className="py-20 bg-navy-800/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              About <span className="text-gradient">Dr. Q</span>
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Founder of Microbiome Reset
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="glass-effect p-8 rounded-3xl">
+                <div className="w-32 h-32 rounded-full bg-gradient-to-br from-accent-400 to-secondary-400 flex items-center justify-center mb-6 mx-auto">
+                  <span className="text-6xl">👨‍⚕️</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-center">Dr. Carlos Quezada, RN</h3>
+                <div className="space-y-3 text-gray-400">
+                  <div className="flex items-center space-x-3">
+                    <svg className="w-5 h-5 text-accent-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg>
+                    <span>RN Compact License</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <svg className="w-5 h-5 text-accent-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg>
+                    <span>Functional Medicine Specialist</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <svg className="w-5 h-5 text-accent-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg>
+                    <span>Gut Health & Microbiome Expert</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <svg className="w-5 h-5 text-accent-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg>
+                    <span>Pittsburgh Integrative Health Network</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 text-accent-400">Why I Created This Program</h3>
+                  <p className="text-gray-400 leading-relaxed">
+                    After years of working in healthcare, I witnessed countless patients struggling with chronic digestive issues, autoimmune conditions, and unexplained symptoms that conventional medicine couldn't fully address. The missing piece was always the gut microbiome.
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-gray-400 leading-relaxed">
+                    Through my training in functional medicine and deep study of microbiome science, I discovered that restoring gut health was the key to transforming overall wellness. But quality, personalized gut health programs were either inaccessible or prohibitively expensive.
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-gray-400 leading-relaxed">
+                    Microbiome Reset was born from a simple mission: to make evidence-based, personalized gut health optimization accessible to everyone, regardless of location. By leveraging virtual care technology, I can now help people worldwide achieve the health transformations they deserve.
+                  </p>
+                </div>
+
+                <div className="bg-accent-500/10 p-6 rounded-xl border border-accent-400/20">
+                  <h4 className="font-bold text-lg mb-2 text-accent-400">The Virtual Care Advantage</h4>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    Our 100% virtual model means you get the same high-quality care from the comfort of your home. No travel, no waiting rooms, just personalized support when and where you need it. With secure video consultations and ongoing digital support, distance is no longer a barrier to exceptional healthcare.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Scientific Principles */}
       <section className="py-20 bg-navy-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
