@@ -62,7 +62,7 @@ export default function ComparisonSection() {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.5, delay: index * 0.1 }}
                                     viewport={{ once: true }}
-                                    className="glass-effect p-4 rounded-xl bg-red-500/5 border border-red-500/20"
+                                    className="glass-effect p-4 rounded-xl comparison-card-negative"
                                 >
                                     <div className="flex items-start space-x-3">
                                         <svg className="w-6 h-6 text-red-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -88,7 +88,7 @@ export default function ComparisonSection() {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.5, delay: index * 0.1 }}
                                     viewport={{ once: true }}
-                                    className="glass-effect p-4 rounded-xl bg-green-500/5 border border-green-500/30"
+                                    className="glass-effect-strong p-4 rounded-xl comparison-card-positive"
                                 >
                                     <div className="flex items-start space-x-3">
                                         <svg className="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
