@@ -4,6 +4,9 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import VideoSection from '@/components/VideoSection'
 import EmailCaptureSection from '@/components/EmailCaptureSection'
+import FAQSection from '@/components/FAQSection'
+import GuaranteeSection from '@/components/GuaranteeSection'
+import ComparisonSection from '@/components/ComparisonSection'
 
 export default function Home() {
   // SVG Icon Components
@@ -70,7 +73,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-2">
           <div className="flex items-center justify-center">
             <span className="text-xs md:text-sm font-semibold text-accent-400 tracking-wider">
-              VERSION 1.4
+              VERSION 1.5
             </span>
           </div>
         </div>
@@ -111,13 +114,13 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="text-gradient">Microbiome Reset</span>
+              <span className="text-gradient">Transform Your Gut Health</span>
               <br />
-              <span className="text-white">Transform Your Gut Health</span>
+              <span className="text-white">in 30 Days - Guaranteed</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Science-backed virtual programs to optimize your gut microbiome and unlock your body's full potential
+              RN-led virtual programs to optimize your microbiome and experience improved digestion, energy, and mental clarity in weeks, not months
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -135,8 +138,26 @@ export default function Home() {
               </Link>
             </div>
 
+            {/* Trust Badges Row */}
+            <div className="mt-8 flex flex-wrap justify-center gap-4 md:gap-6">
+              {[
+                { label: 'RN-Led Programs', icon: '🏥' },
+                { label: 'HIPAA Compliant', icon: '🔒' },
+                { label: 'Evidence-Based', icon: '🔬' },
+                { label: 'Serving 40+ States', icon: '🗺️' }
+              ].map((badge, index) => (
+                <div
+                  key={index}
+                  className="flex items-center space-x-2 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10"
+                >
+                  <span className="text-lg">{badge.icon}</span>
+                  <span className="text-sm font-semibold text-gray-300">{badge.label}</span>
+                </div>
+              ))}
+            </div>
+
             {/* 30-Day Guarantee Badge */}
-            <div className="mt-8 flex justify-center">
+            <div className="mt-6 flex justify-center">
               <div className="bg-gradient-to-r from-green-500/20 to-accent-500/20 backdrop-blur-sm border-2 border-green-400/40 px-6 py-3 rounded-2xl flex items-center space-x-3 shadow-lg">
                 <div className="text-2xl">🛡️</div>
                 <span className="text-white font-semibold text-lg">Risk-Free 30-Day Money-Back Guarantee</span>
@@ -315,6 +336,88 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Meet Dr. Q Section */}
+      <section className="py-20 bg-navy-800/50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="glass-effect p-8 md:p-12 rounded-3xl text-center"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">
+              Meet <span className="text-gradient">Dr. Q</span>
+            </h2>
+
+            {/* Photo Placeholder */}
+            <div className="w-48 h-48 mx-auto mb-8 rounded-full bg-gradient-to-br from-accent-400 to-secondary-400 flex items-center justify-center overflow-hidden">
+              <span className="text-8xl">👨‍⚕️</span>
+            </div>
+
+            <div className="max-w-3xl mx-auto space-y-4 mb-8">
+              <p className="text-lg text-gray-300 leading-relaxed">
+                Dr. Q is a registered nurse and functional medicine practitioner with an RN Compact License, enabling him to provide virtual consultations across 40+ U.S. states.
+              </p>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                As founder of Pittsburgh Integrative, he combines clinical expertise with personalized gut health protocols.
+              </p>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                His mission: help clients worldwide achieve optimal wellness through evidence-based microbiome optimization.
+              </p>
+            </div>
+
+            <Link
+              href="/about"
+              className="inline-block bg-gradient-to-r from-accent-500 to-primary-500 px-8 py-3 rounded-full font-semibold hover:shadow-xl hover:shadow-accent-500/50 transition-all duration-300"
+            >
+              Learn More About Dr. Q
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Credentials Section */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Credentials & <span className="text-gradient">Expertise</span>
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { label: 'RN-Led Programs', icon: '🏥' },
+              { label: 'Functional Medicine Certified', icon: '🔬' },
+              { label: 'Serving 40+ States', icon: '🗺️' },
+              { label: 'HIPAA Compliant', icon: '🔒' }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="glass-effect p-6 rounded-2xl text-center"
+              >
+                <div className="text-4xl mb-3">{item.icon}</div>
+                <p className="font-semibold text-sm">{item.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Section */}
+      <ComparisonSection />
 
       {/* Benefits Section */}
       <section className="py-20">
@@ -549,6 +652,12 @@ export default function Home() {
 
       {/* Video Section */}
       <VideoSection />
+
+      {/* FAQ Section */}
+      <FAQSection />
+
+      {/* Guarantee Section */}
+      <GuaranteeSection />
 
       {/* Email Capture Lead Magnet */}
       <EmailCaptureSection />
