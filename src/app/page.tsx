@@ -79,7 +79,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-2">
           <div className="flex items-center justify-center">
             <span className="text-xs md:text-sm font-semibold text-accent-400 tracking-wider">
-              VERSION 2.3
+              VERSION 2.4
             </span>
           </div>
         </div>
@@ -164,7 +164,7 @@ export default function Home() {
 
             {/* 30-Day Guarantee Badge */}
             <div className="mt-6 flex justify-center">
-              <div className="guarantee-badge border-2 border-green-400/50 px-6 py-3 rounded-2xl flex items-center space-x-3 shadow-lg hover:shadow-2xl transition-all duration-300">
+              <div className="guarantee-badge border-2 border-green-400/50 px-6 py-3 rounded-2xl flex items-center space-x-3 shadow-lg hover:shadow-2xl transition-all duration-300 glass-shimmer">
                 <div className="text-2xl">🛡️</div>
                 <span className="text-white font-semibold text-lg">Risk-Free 30-Day Money-Back Guarantee</span>
               </div>
@@ -344,14 +344,15 @@ export default function Home() {
       </section>
 
       {/* Meet Dr. Q Section */}
-      <section className="py-20 bg-navy-800/50">
+      {/* Meet Dr. Q Section */}
+      <section className="py-20 section-transparent">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="glass-effect-strong p-8 md:p-12 rounded-3xl text-center dr-q-card"
+            className="glass-effect-strong p-8 md:p-12 rounded-3xl text-center dr-q-card glass-shimmer"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-8">
               Meet <span className="text-gradient">Dr. Q</span>
@@ -483,7 +484,7 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 bg-navy-800/50">
+      <section className="py-20 section-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -585,7 +586,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-navy-800/50">
+      <section className="py-20 section-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

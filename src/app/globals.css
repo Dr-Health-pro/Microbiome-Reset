@@ -23,6 +23,16 @@ body {
     @apply bg-gradient-to-br from-navy-900 via-navy-800 to-primary-900;
   }
 
+  /* Performance Optimizations */
+  .glass-effect,
+  .glass-effect-strong,
+  .glass-effect-subtle,
+  .glass-effect-frosted {
+    will-change: backdrop-filter, background, border-color;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+
   .glass-effect {
     @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl;
     backdrop-filter: blur(16px) saturate(180%);
@@ -41,12 +51,15 @@ body {
     @apply bg-white/5 backdrop-blur-sm border border-white/5 shadow-lg;
     backdrop-filter: blur(12px) saturate(150%);
     -webkit-backdrop-filter: blur(12px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 16px 0 rgba(0, 139, 139, 0.05);
   }
 
   .glass-effect-frosted {
     background: rgba(15, 23, 42, 0.85);
     backdrop-filter: blur(24px) saturate(180%);
     -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   }
 
@@ -456,5 +469,53 @@ body {
         transparent,
         rgba(0, 139, 139, 0.5),
         transparent);
+  }
+
+  /* SECTION TRANSPARENT */
+  .section-transparent {
+    background: linear-gradient(180deg,
+        rgba(15, 23, 42, 0.3) 0%,
+        rgba(15, 23, 42, 0.6) 50%,
+        rgba(15, 23, 42, 0.3) 100%);
+    position: relative;
+  }
+
+  .section-transparent::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 50%, rgba(0, 139, 139, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(0, 139, 139, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  /* GLASS SHIMMER EFFECT */
+  @keyframes glass-shimmer {
+    0% {
+      background-position: -200% center;
+    }
+
+    100% {
+      background-position: 200% center;
+    }
+  }
+
+  .glass-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glass-shimmer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 100%);
+    background-size: 200% 100%;
+    animation: glass-shimmer 3s ease-in-out infinite;
+    pointer-events: none;
   }
 }
