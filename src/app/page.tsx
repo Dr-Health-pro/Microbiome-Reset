@@ -9,7 +9,8 @@ import GuaranteeSection from '@/components/GuaranteeSection'
 import ComparisonSection from '@/components/ComparisonSection'
 import SocialProofCounters from '@/components/SocialProofCounters'
 import ScrollProgress from '@/components/ScrollProgress'
-import { OrganizationSchema, ServiceSchema, FAQSchema } from '@/components/Schema'
+import { ServiceSchema, FAQSchema, AggregateRatingSchema } from '@/components/Schema'
+import { trackCTAClick } from '@/lib/analytics'
 
 export default function Home() {
   // SVG Icon Components
@@ -132,12 +133,14 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 href="/packages"
+                onClick={() => trackCTAClick('Get Started Today', 'hero_section')}
                 className="bg-[#008B8B] hover:bg-[#006666] text-white min-h-[50px] md:min-h-[60px] px-10 py-4 rounded-full font-bold text-lg shadow-xl transition-all duration-300 transform hover:scale-105"
               >
                 Get Started Today
               </Link>
               <Link
                 href="/about"
+                onClick={() => trackCTAClick('Learn More', 'hero_section')}
                 className="glass-effect px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/10 transition-all duration-300"
               >
                 Learn More
@@ -698,9 +701,9 @@ export default function Home() {
       </section>
 
       {/* JSON-LD Schema Markup */}
-      <OrganizationSchema />
       <ServiceSchema />
       <FAQSchema />
+      <AggregateRatingSchema />
     </div>
   )
 }

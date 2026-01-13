@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import StickyCTA from '@/components/StickyCTA'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
+import { OrganizationSchema } from '@/components/Schema'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -57,6 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <OrganizationSchema />
         <GoogleAnalytics />
         <Navigation />
         <main className="min-h-screen">

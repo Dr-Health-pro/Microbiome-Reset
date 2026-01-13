@@ -73,7 +73,15 @@ export default function VideoSection() {
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                  <div className="w-16 h-16 rounded-full play-button flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div
+                    className="w-16 h-16 rounded-full play-button flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      // Dynamic import to avoid SSR issues or just standard interaction
+                      const { trackVideoPlay } = require('@/lib/analytics')
+                      trackVideoPlay(video.title)
+                    }}
+                  >
                     <svg
                       className="w-8 h-8 text-white ml-1"
                       fill="currentColor"

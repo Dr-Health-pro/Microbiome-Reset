@@ -16,6 +16,12 @@ export default function EmailCaptureSection() {
         // TODO: Connect to email marketing service (Mailchimp, ConvertKit, etc.)
         console.log('Email capture submitted:', formData)
 
+        // Track submission
+        if (typeof window !== 'undefined') {
+            const { trackFormSubmission } = require('@/lib/analytics')
+            trackFormSubmission('free_guide_download')
+        }
+
         setSubmitted(true)
 
         // Reset form after 3 seconds
