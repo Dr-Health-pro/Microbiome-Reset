@@ -79,7 +79,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-2">
           <div className="flex items-center justify-center">
             <span className="text-xs md:text-sm font-semibold text-accent-400 tracking-wider">
-              VERSION 2.2
+              VERSION 2.3
             </span>
           </div>
         </div>
@@ -559,7 +559,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="relative glass-effect p-6 rounded-2xl hover:bg-white/10 transition-all duration-300 text-center"
+                className="glass-effect-strong p-6 rounded-2xl process-step hover:scale-105 transition-all duration-300 text-center"
               >
                 {/* Arrow connector (hidden on last item and mobile) */}
                 {index < 4 && (

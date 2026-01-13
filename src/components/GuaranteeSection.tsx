@@ -12,7 +12,7 @@ export default function GuaranteeSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="glass-effect p-8 md:p-12 rounded-3xl border-2 border-green-500/30"
+                    className="glass-effect-strong p-8 md:p-12 rounded-3xl border-2 border-green-500/40 guarantee-section"
                 >
                     <div className="text-center mb-8">
                         {/* Shield Icon */}

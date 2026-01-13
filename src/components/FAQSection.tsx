@@ -72,7 +72,7 @@ export default function FAQSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.05 }}
                             viewport={{ once: true }}
-                            className="glass-effect rounded-2xl overflow-hidden"
+                            className={`glass-effect-strong rounded-2xl overflow-hidden faq-item ${openIndex === index ? 'active' : ''}`}
                         >
                             <button
                                 onClick={() => toggleFAQ(index)}

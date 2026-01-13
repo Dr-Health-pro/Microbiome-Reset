@@ -40,7 +40,7 @@ export default function EmailCaptureSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="glass-effect p-8 md:p-12 rounded-3xl"
+                    className="glass-effect-strong p-8 md:p-12 rounded-3xl lead-form-section"
                 >
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                         {/* Left Side - Icon and Text */}
